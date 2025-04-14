@@ -75,7 +75,7 @@ class SegTree(start: Int, end: Int, initialValue: Int):
 
 class BookMyShow(n: Int, m: Int):
   private val seg = SegTree(0, n - 1, m)
-  private val seats = Array.fill(n.toInt)(m.toInt)
+  private val seats = Array.fill(n)(m)
   private var startRow = 0
   
   def gather(k: Int, maxRow: Int): List[Int] =
